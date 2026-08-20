@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Privacy Policy | CloudRide{% endblock %}
+
+{% block content %}
+{% include "includes/navbar.html" %}
+<main class="legal-page">
+  <section class="section-pad">
+    <div class="container">
+      <a class="legal-back" href="{% url 'core:home' %}">Back to home</a>
+      <span class="eyebrow dark">Policy</span>
+      <h1 class="section-title">Privacy Policy</h1>
+      <p>CloudRide collects the information needed to respond to enquiries, process booking requests, and improve customer support. This may include name, email address, phone number, pickup location, destination, preferred service, and message details.</p>
+      <p>We use submitted information only for operating mobility services, contacting customers, managing bookings, and improving the website experience. We do not sell customer information.</p>
+      <p>Production deployments should connect this policy to the company’s final legal review, data retention rules, and any jurisdiction-specific privacy obligations.</p>
+    </div>
+  </section>
+</main>
+{% include "includes/footer.html" %}
+{% endblock %}

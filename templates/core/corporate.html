@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Corporate Mobility | CloudRide{% endblock %}
+
+{% block content %}
+{% include "includes/navbar.html" %}
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Corporate</span>
+      <h1>Electric mobility for your business.</h1>
+      <p>Move employees, guests, and operational teams with cleaner vehicles and a transport partner built for repeat service.</p>
+    </div>
+  </section>
+  <section class="section-pad bg-charcoal text-white">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6 reveal"><div class="step-card"><i class="bi bi-person-workspace"></i><h3>Employee transportation</h3><p>Scheduled staff movement and cleaner commute support.</p></div></div>
+        <div class="col-md-6 reveal"><div class="step-card"><i class="bi bi-briefcase"></i><h3>Corporate rides</h3><p>Reliable executive, guest, airport, and event transportation.</p></div></div>
+        <div class="col-md-6 reveal"><div class="step-card"><i class="bi bi-key"></i><h3>EV rentals</h3><p>Short-term and project-based electric vehicle access.</p></div></div>
+        <div class="col-md-6 reveal"><div class="step-card"><i class="bi bi-diagram-3"></i><h3>Fleet transition</h3><p>Fleet planning, charging guidance, and operational support.</p></div></div>
+      </div>
+      <div class="text-center mt-5 reveal"><a class="btn btn-accent btn-lg" href="{% url 'core:contact' %}">Talk to Our Team</a></div>
+    </div>
+  </section>
+</main>
+{% include "includes/footer.html" %}
+{% endblock %}

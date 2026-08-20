@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Vehicles | CloudRide{% endblock %}
+
+{% block content %}
+{% include "includes/navbar.html" %}
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Vehicles</span>
+      <h1>Electric vehicles for rides, rentals, and business travel.</h1>
+      <p>The catalogue is powered by Django Admin, so vehicles can be added, updated, hidden, or expanded as the fleet grows.</p>
+    </div>
+  </section>
+  <section class="section-pad bg-white">
+    <div class="container">
+      <div class="row g-4">
+        {% if vehicles %}
+          {% for vehicle in vehicles %}
+            <div class="col-md-6 col-xl-3 reveal">
+              <article class="vehicle-card">
+                {% if vehicle.image %}<img src="{{ vehicle.image.url }}" alt="{{ vehicle.name }}">{% elif vehicle.image_url %}<img src="{{ vehicle.image_url }}" alt="{{ vehicle.name }}">{% else %}<img src="{% static 'img/ev-mobility-hero.png' %}" alt="{{ vehicle.name }}">{% endif %}
+                <div class="vehicle-body"><h3>{{ vehicle.name }}</h3><p>{{ vehicle.vehicle_type }}</p><div class="vehicle-meta"><span><i class="bi bi-people"></i> {{ vehicle.seats }} seats</span><span><i class="bi bi-battery-charging"></i> {{ vehicle.estimated_range_km }} km</span></div><a class="btn btn-accent w-100" href="{% url 'core:booking' %}">Book Now</a></div>
+              </article>
+            </div>
+          {% endfor %}
+        {% else %}
+          {% for vehicle in fallback_vehicles %}
+            <div class="col-md-6 col-xl-3 reveal"><article class="vehicle-card"><img src="{% static 'img/ev-mobility-hero.png' %}" alt="{{ vehicle.name }}"><div class="vehicle-body"><h3>{{ vehicle.name }}</h3><p>{{ vehicle.vehicle_type }}</p><div class="vehicle-meta"><span><i class="bi bi-people"></i> {{ vehicle.seats }} seats</span><span><i class="bi bi-battery-charging"></i> {{ vehicle.estimated_range_km }} km</span></div><a class="btn btn-accent w-100" href="{% url 'core:booking' %}">Book Now</a></div></article></div>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </section>
+</main>
+{% include "includes/footer.html" %}
+{% endblock %}

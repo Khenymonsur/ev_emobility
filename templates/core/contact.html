@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Contact | CloudRide{% endblock %}
+
+{% block content %}
+{% include "includes/navbar.html" %}
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Contact</span>
+      <h1>We would love to hear from you.</h1>
+      <p>Send questions, partnership enquiries, corporate mobility requests, or charging collaboration notes to our team.</p>
+    </div>
+  </section>
+  {% include "includes/messages.html" %}
+  <section class="section-pad bg-white">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-5 reveal">
+          <h2 class="section-title">Get in touch</h2>
+          <div class="contact-list">
+            <a href="tel:+2348000000000"><i class="bi bi-telephone"></i> +234 800 000 0000</a>
+            <a href="mailto:hello@cloudride.africa"><i class="bi bi-envelope"></i> hello@cloudride.africa</a>
+            <span><i class="bi bi-geo-alt"></i> 11 Mobility Drive, Victoria Island, Lagos</span>
+            <span><i class="bi bi-clock"></i> Mon to Fri: 9:00am - 5:00pm</span>
+            <span><i class="bi bi-clock-history"></i> Sat: 10:00am - 4:00pm</span>
+          </div>
+          <div class="socials">
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+          </div>
+          <div class="google-placeholder">Google Maps placeholder</div>
+        </div>
+        <div class="col-lg-7 reveal">
+          <form class="form-panel" method="post" novalidate>
+            {% csrf_token %}
+            <input type="hidden" name="form_kind" value="contact">
+            <div class="row g-3">
+              <div class="col-md-6"><label class="form-label" for="{{ contact_form.name.id_for_label }}">Name</label>{{ contact_form.name }}{{ contact_form.name.errors }}</div>
+              <div class="col-md-6"><label class="form-label" for="{{ contact_form.email.id_for_label }}">Email</label>{{ contact_form.email }}{{ contact_form.email.errors }}</div>
+              <div class="col-12"><label class="form-label" for="{{ contact_form.phone.id_for_label }}">Phone</label>{{ contact_form.phone }}{{ contact_form.phone.errors }}</div>
+              <div class="col-12"><label class="form-label" for="{{ contact_form.message.id_for_label }}">Message</label>{{ contact_form.message }}{{ contact_form.message.errors }}</div>
+              <div class="col-12"><button class="btn btn-accent btn-lg w-100" type="submit">Send Message</button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% include "includes/footer.html" %}
+{% endblock %}

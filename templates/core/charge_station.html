@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Charge Station | CloudRide{% endblock %}
+
+{% block content %}
+{% include "includes/navbar.html" %}
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Charge Station</span>
+      <h1>Charging operations built to keep electric fleets moving.</h1>
+      <p>Our charging network supports CloudRide operations, rental customers, and future third-party EV users across strategic city locations.</p>
+    </div>
+  </section>
+  <section class="section-pad bg-white">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5 reveal">
+          <h2 class="section-title">Designed for clean energy access and practical uptime.</h2>
+          <p>Stations can combine AC chargers, DC fast charging, solar-ready infrastructure, battery storage planning, and fleet scheduling support as the network matures.</p>
+          <div class="row g-3 mb-4">
+            <div class="col-4"><div class="charge-stat"><strong>{{ charging_summary.station_count }}</strong><span>Stations</span></div></div>
+            <div class="col-4"><div class="charge-stat"><strong>{{ charging_summary.available_chargers }}</strong><span>Available</span></div></div>
+            <div class="col-4"><div class="charge-stat"><strong>{{ charging_summary.charger_types }}</strong><span>Types</span></div></div>
+          </div>
+          <a class="btn btn-accent" href="{% url 'core:contact' %}">Find a Charging Station</a>
+        </div>
+        <div class="col-lg-7 reveal">
+          <div class="map-panel">
+            <div class="map-grid"></div><div class="map-pin pin-one"></div><div class="map-pin pin-two"></div><div class="map-pin pin-three"></div>
+            <div class="map-list">
+              {% if charging_stations %}
+                {% for station in charging_stations %}<div><strong>{{ station.name }}</strong><span>{{ station.location }} · {{ station.charger_type }} · {{ station.available_chargers }} of {{ station.total_chargers }} available</span></div>{% endfor %}
+              {% else %}
+                {% for station in fallback_chargers %}<div><strong>{{ station.name }}</strong><span>{{ station.location }} · {{ station.charger_type }} · {{ station.available_chargers }} available</span></div>{% endfor %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% include "includes/footer.html" %}
+{% endblock %}

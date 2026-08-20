@@ -1,0 +1,417 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+{% include "includes/navbar.html" %}
+
+<main id="home">
+  <section class="hero-section section-pad">
+    <div class="hero-bg" style="background-image: url('{% static 'img/ev-mobility-hero.png' %}');"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="row align-items-center min-vh-100 py-5">
+        <div class="col-lg-7">
+          <span class="eyebrow reveal">Electric mobility for African cities</span>
+          <h1 class="display-2 fw-bold reveal">Move Smarter. Go Electric.</h1>
+          <p class="lead reveal">
+            Book clean electric rides, reserve EV rentals, access charging support, and move teams with reliable fleet-ready transportation.
+          </p>
+          <div class="d-flex flex-wrap gap-3 reveal">
+            <a class="btn btn-accent btn-lg" href="{% url 'core:booking' %}">Book a Ride</a>
+            <a class="btn btn-outline-light btn-lg" href="{% url 'core:services' %}">Explore Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include "includes/messages.html" %}
+
+  <section id="about" class="section-pad bg-white">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 reveal">
+          <span class="eyebrow dark">About us</span>
+          <h2 class="section-title">Cleaner transport built for everyday movement.</h2>
+          <p>
+            CloudRide helps people and companies move through the city with quiet, efficient electric vehicles. Our mission is to make sustainable transportation affordable, reliable, and practical for modern African communities.
+          </p>
+          <div class="row g-3 mt-3">
+            <div class="col-sm-6">
+              <div class="mini-stat">
+                <i class="bi bi-shield-check"></i>
+                <strong>Reliable trips</strong>
+                <span>Professional ride and rental support.</span>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="mini-stat">
+                <i class="bi bi-tree"></i>
+                <strong>Cleaner cities</strong>
+                <span>Zero tailpipe emissions on every EV journey.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 reveal">
+          <div class="image-panel">
+            <img src="{% static 'img/ev-mobility-hero.png' %}" alt="Electric vehicles on a modern African city street">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section-pad bg-soft">
+    <div class="container">
+      <div class="section-heading text-center reveal">
+        <span class="eyebrow dark">Services</span>
+        <h2 class="section-title">Electric mobility, shaped around how you move.</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-xl-4 reveal">
+          <article class="service-card">
+            <i class="bi bi-car-front"></i>
+            <h3>EV Rides</h3>
+            <p>Comfortable electric transportation for everyday journeys.</p>
+            <a href="{% url 'core:services' %}">Learn More</a>
+          </article>
+        </div>
+        <div class="col-md-6 col-xl-4 reveal">
+          <article class="service-card">
+            <i class="bi bi-key"></i>
+            <h3>EV Rentals</h3>
+            <p>Rent electric vehicles for personal trips or business use.</p>
+            <a href="{% url 'core:services' %}">Learn More</a>
+          </article>
+        </div>
+        <div class="col-md-6 col-xl-4 reveal">
+          <article class="service-card">
+            <i class="bi bi-calendar2-check"></i>
+            <h3>Scheduled Rides</h3>
+            <p>Book a ride ahead of time for meetings, flights, or events.</p>
+            <a href="{% url 'core:services' %}">Learn More</a>
+          </article>
+        </div>
+        <div class="col-md-6 col-xl-4 reveal">
+          <article class="service-card">
+            <i class="bi bi-buildings"></i>
+            <h3>Corporate Mobility</h3>
+            <p>Transportation solutions for companies and organizations.</p>
+            <a href="{% url 'core:services' %}#corporate-mobility">Learn More</a>
+          </article>
+        </div>
+        <div class="col-md-6 col-xl-4 reveal">
+          <article class="service-card">
+            <i class="bi bi-ev-station"></i>
+            <h3>EV Charging</h3>
+            <p>Find and access charging support across demo city locations.</p>
+            <a href="{% url 'core:charge_station' %}">Learn More</a>
+          </article>
+        </div>
+        <div class="col-md-6 col-xl-4 reveal">
+          <article class="service-card">
+            <i class="bi bi-diagram-3"></i>
+            <h3>Fleet Solutions</h3>
+            <p>EV fleet solutions for businesses ready to electrify operations.</p>
+            <a href="{% url 'core:contact' %}">Learn More</a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad bg-charcoal text-white">
+    <div class="container">
+      <div class="section-heading text-center reveal">
+        <span class="eyebrow">How it works</span>
+        <h2 class="section-title">Three steps to a cleaner journey.</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 reveal">
+          <div class="step-card">
+            <span>1</span>
+            <i class="bi bi-phone"></i>
+            <h3>Book</h3>
+            <p>Choose your service and enter your trip details.</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="step-card">
+            <span>2</span>
+            <i class="bi bi-car-front-fill"></i>
+            <h3>Ride</h3>
+            <p>Get matched with an available EV or collect your rental.</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="step-card">
+            <span>3</span>
+            <i class="bi bi-arrow-up-right-circle"></i>
+            <h3>Go</h3>
+            <p>Enjoy a comfortable, reliable electric journey.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="vehicles" class="section-pad bg-white">
+    <div class="container">
+      <div class="d-flex flex-column flex-lg-row justify-content-between gap-3 align-items-lg-end mb-4 reveal">
+        <div>
+          <span class="eyebrow dark">Vehicle showcase</span>
+          <h2 class="section-title mb-0">EVs ready for rides, rentals, and business travel.</h2>
+        </div>
+        <a class="btn btn-outline-dark" href="{% url 'core:booking' %}">Book Now</a>
+      </div>
+      <div class="row g-4">
+        {% if vehicles %}
+          {% for vehicle in vehicles %}
+            <div class="col-md-6 col-xl-3 reveal">
+              <article class="vehicle-card">
+                {% if vehicle.image %}
+                  <img src="{{ vehicle.image.url }}" alt="{{ vehicle.name }}">
+                {% elif vehicle.image_url %}
+                  <img src="{{ vehicle.image_url }}" alt="{{ vehicle.name }}">
+                {% else %}
+                  <img src="{% static 'img/ev-mobility-hero.png' %}" alt="{{ vehicle.name }}">
+                {% endif %}
+                <div class="vehicle-body">
+                  <h3>{{ vehicle.name }}</h3>
+                  <p>{{ vehicle.vehicle_type }}</p>
+                  <div class="vehicle-meta">
+                    <span><i class="bi bi-people"></i> {{ vehicle.seats }} seats</span>
+                    <span><i class="bi bi-battery-charging"></i> {{ vehicle.estimated_range_km }} km</span>
+                  </div>
+                  <a class="btn btn-accent w-100" href="{% url 'core:booking' %}">Book Now</a>
+                </div>
+              </article>
+            </div>
+          {% endfor %}
+        {% else %}
+          {% for vehicle in fallback_vehicles %}
+            <div class="col-md-6 col-xl-3 reveal">
+              <article class="vehicle-card">
+                <img src="{% static 'img/ev-mobility-hero.png' %}" alt="{{ vehicle.name }}">
+                <div class="vehicle-body">
+                  <h3>{{ vehicle.name }}</h3>
+                  <p>{{ vehicle.vehicle_type }}</p>
+                  <div class="vehicle-meta">
+                    <span><i class="bi bi-people"></i> {{ vehicle.seats }} seats</span>
+                    <span><i class="bi bi-battery-charging"></i> {{ vehicle.estimated_range_km }} km</span>
+                  </div>
+                  <a class="btn btn-accent w-100" href="{% url 'core:booking' %}">Book Now</a>
+                </div>
+              </article>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" class="section-pad bg-soft">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5 reveal">
+          <span class="eyebrow dark">Simple booking</span>
+          <h2 class="section-title">Request a ride or rental in under a minute.</h2>
+          <p>Submit your trip details and our operations team will confirm availability, vehicle fit, and next steps.</p>
+        </div>
+        <div class="col-lg-7 reveal">
+          <form class="form-panel" method="post" novalidate>
+            {% csrf_token %}
+            <input type="hidden" name="form_kind" value="booking">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" for="{{ booking_form.service_type.id_for_label }}">Service Type</label>
+                {{ booking_form.service_type }}
+                {{ booking_form.service_type.errors }}
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="{{ booking_form.pickup_location.id_for_label }}">Pickup Location</label>
+                {{ booking_form.pickup_location }}
+                {{ booking_form.pickup_location.errors }}
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="{{ booking_form.destination.id_for_label }}">Destination</label>
+                {{ booking_form.destination }}
+                {{ booking_form.destination.errors }}
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="{{ booking_form.date.id_for_label }}">Date</label>
+                {{ booking_form.date }}
+                {{ booking_form.date.errors }}
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="{{ booking_form.time.id_for_label }}">Time</label>
+                {{ booking_form.time }}
+                {{ booking_form.time.errors }}
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="{{ booking_form.name.id_for_label }}">Name</label>
+                {{ booking_form.name }}
+                {{ booking_form.name.errors }}
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="{{ booking_form.phone.id_for_label }}">Phone Number</label>
+                {{ booking_form.phone }}
+                {{ booking_form.phone.errors }}
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="{{ booking_form.email.id_for_label }}">Email</label>
+                {{ booking_form.email }}
+                {{ booking_form.email.errors }}
+              </div>
+              <div class="col-12">
+                <button class="btn btn-accent btn-lg w-100" type="submit">Request Booking</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="charging" class="section-pad bg-white">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6 reveal">
+          <span class="eyebrow dark">EV charging</span>
+          <h2 class="section-title">Charging access across high-demand city routes.</h2>
+          <p>Connect drivers, rental customers, and fleet partners to fast, dependable charging points.</p>
+          <div class="row g-3 mb-4">
+            <div class="col-4">
+              <div class="charge-stat"><strong>{{ charging_summary.station_count }}</strong><span>Stations</span></div>
+            </div>
+            <div class="col-4">
+              <div class="charge-stat"><strong>{{ charging_summary.available_chargers }}</strong><span>Available</span></div>
+            </div>
+            <div class="col-4">
+              <div class="charge-stat"><strong>{{ charging_summary.charger_types }}</strong><span>Types</span></div>
+            </div>
+          </div>
+          <a class="btn btn-accent" href="{% url 'core:charge_station' %}">Find a Charging Station</a>
+        </div>
+        <div class="col-lg-6 reveal">
+          <div class="map-panel">
+            <div class="map-grid"></div>
+            <div class="map-pin pin-one"></div>
+            <div class="map-pin pin-two"></div>
+            <div class="map-pin pin-three"></div>
+            <div class="map-list">
+              {% if charging_stations %}
+                {% for station in charging_stations|slice:":4" %}
+                  <div><strong>{{ station.name }}</strong><span>{{ station.location }} · {{ station.charger_type }} · {{ station.available_chargers }} available</span></div>
+                {% endfor %}
+              {% else %}
+                {% for station in fallback_chargers %}
+                  <div><strong>{{ station.name }}</strong><span>{{ station.location }} · {{ station.charger_type }} · {{ station.available_chargers }} available</span></div>
+                {% endfor %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="corporate" class="section-pad bg-charcoal text-white">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6 reveal">
+          <span class="eyebrow">Corporate</span>
+          <h2 class="section-title">Electric Mobility for Your Business</h2>
+          <p>Give your employees, guests, and operations teams a quieter, cleaner, and more accountable way to move.</p>
+          <a class="btn btn-accent btn-lg" href="{% url 'core:contact' %}">Talk to Our Team</a>
+        </div>
+        <div class="col-lg-6 reveal">
+          <div class="corporate-grid">
+            <div><i class="bi bi-person-workspace"></i><span>Employee transportation</span></div>
+            <div><i class="bi bi-briefcase"></i><span>Corporate rides</span></div>
+            <div><i class="bi bi-key"></i><span>EV rentals</span></div>
+            <div><i class="bi bi-diagram-3"></i><span>Fleet solutions</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad bg-soft">
+    <div class="container">
+      <div class="section-heading text-center reveal">
+        <span class="eyebrow dark">Sustainability</span>
+        <h2 class="section-title">Environmental impact dashboard</h2>
+        <p class="text-muted">Demo figures shown as placeholders until real company data is connected.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 reveal">
+          <div class="impact-card"><strong data-counter="186">0</strong><span>Tonnes CO2 emissions reduced</span></div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="impact-card"><strong data-counter="24800">0</strong><span>Electric trips completed</span></div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="impact-card"><strong data-counter="72">0</strong><span>EVs on the road</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section-pad bg-white">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-5 reveal">
+          <span class="eyebrow dark">Contact</span>
+          <h2 class="section-title">Let’s plan your electric journey.</h2>
+          <div class="contact-list">
+            <a href="tel:+2348000000000"><i class="bi bi-telephone"></i> +234 800 000 0000</a>
+            <a href="mailto:hello@cloudride.africa"><i class="bi bi-envelope"></i> hello@cloudride.africa</a>
+            <span><i class="bi bi-geo-alt"></i> Victoria Island, Lagos, Nigeria</span>
+          </div>
+          <div class="socials">
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+          </div>
+          <div class="google-placeholder">Google Maps placeholder</div>
+        </div>
+        <div class="col-lg-7 reveal">
+          <form class="form-panel" method="post" novalidate>
+            {% csrf_token %}
+            <input type="hidden" name="form_kind" value="contact">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" for="{{ contact_form.name.id_for_label }}">Name</label>
+                {{ contact_form.name }}
+                {{ contact_form.name.errors }}
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="{{ contact_form.email.id_for_label }}">Email</label>
+                {{ contact_form.email }}
+                {{ contact_form.email.errors }}
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="{{ contact_form.phone.id_for_label }}">Phone</label>
+                {{ contact_form.phone }}
+                {{ contact_form.phone.errors }}
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="{{ contact_form.message.id_for_label }}">Message</label>
+                {{ contact_form.message }}
+                {{ contact_form.message.errors }}
+              </div>
+              <div class="col-12">
+                <button class="btn btn-accent btn-lg w-100" type="submit">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "includes/footer.html" %}
+{% endblock %}

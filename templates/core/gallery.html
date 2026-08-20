@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Gallery | CloudRide{% endblock %}
+
+{% block content %}
+{% include "includes/navbar.html" %}
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Gallery</span>
+      <h1>Clean mobility, city energy, and fleet moments.</h1>
+      <p>A visual preview of the kind of electric mobility experience CloudRide is building.</p>
+    </div>
+  </section>
+  <section class="section-pad bg-white">
+    <div class="container">
+      <div class="gallery-grid">
+        <a class="gallery-tile large reveal" href="{% static 'img/ev-mobility-hero.png' %}"><img src="{% static 'img/ev-mobility-hero.png' %}" alt="Electric vehicles on a modern city route"></a>
+        <div class="gallery-tile visual-card reveal"><i class="bi bi-ev-station"></i><span>Charging access</span></div>
+        <div class="gallery-tile visual-card alt reveal"><i class="bi bi-buildings"></i><span>Corporate travel</span></div>
+        <div class="gallery-tile visual-card warm reveal"><i class="bi bi-calendar2-check"></i><span>Scheduled rides</span></div>
+        <a class="gallery-tile wide reveal" href="{% static 'img/ev-mobility-hero.png' %}"><img src="{% static 'img/ev-mobility-hero.png' %}" alt="EV fleet and charging scene"></a>
+        <div class="gallery-tile visual-card dark reveal"><i class="bi bi-tree"></i><span>Lower emissions</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+{% include "includes/footer.html" %}
+{% endblock %}

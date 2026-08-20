@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Book a Ride | CloudRide{% endblock %}
+
+{% block content %}
+{% include "includes/navbar.html" %}
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Book</span>
+      <h1>Request an electric ride, rental, or scheduled trip.</h1>
+      <p>Share the basics and our operations team will confirm availability, timing, and the best EV option for your trip.</p>
+    </div>
+  </section>
+  {% include "includes/messages.html" %}
+  <section class="section-pad bg-soft">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-5 reveal">
+          <h2 class="section-title">Simple request today. Scalable booking system tomorrow.</h2>
+          <p>This first version captures validated booking requests without adding dispatch, wallets, driver assignment, or real-time tracking before they are needed.</p>
+          <div class="contact-list">
+            <span><i class="bi bi-check-circle"></i> Ride requests</span>
+            <span><i class="bi bi-check-circle"></i> Rentals</span>
+            <span><i class="bi bi-check-circle"></i> Scheduled rides</span>
+          </div>
+        </div>
+        <div class="col-lg-7 reveal">
+          <form class="form-panel" method="post" novalidate>
+            {% csrf_token %}
+            <input type="hidden" name="form_kind" value="booking">
+            <div class="row g-3">
+              <div class="col-md-6"><label class="form-label" for="{{ booking_form.service_type.id_for_label }}">Service Type</label>{{ booking_form.service_type }}{{ booking_form.service_type.errors }}</div>
+              <div class="col-md-6"><label class="form-label" for="{{ booking_form.pickup_location.id_for_label }}">Pickup Location</label>{{ booking_form.pickup_location }}{{ booking_form.pickup_location.errors }}</div>
+              <div class="col-12"><label class="form-label" for="{{ booking_form.destination.id_for_label }}">Destination</label>{{ booking_form.destination }}{{ booking_form.destination.errors }}</div>
+              <div class="col-md-6"><label class="form-label" for="{{ booking_form.date.id_for_label }}">Date</label>{{ booking_form.date }}{{ booking_form.date.errors }}</div>
+              <div class="col-md-6"><label class="form-label" for="{{ booking_form.time.id_for_label }}">Time</label>{{ booking_form.time }}{{ booking_form.time.errors }}</div>
+              <div class="col-md-4"><label class="form-label" for="{{ booking_form.name.id_for_label }}">Name</label>{{ booking_form.name }}{{ booking_form.name.errors }}</div>
+              <div class="col-md-4"><label class="form-label" for="{{ booking_form.phone.id_for_label }}">Phone Number</label>{{ booking_form.phone }}{{ booking_form.phone.errors }}</div>
+              <div class="col-md-4"><label class="form-label" for="{{ booking_form.email.id_for_label }}">Email</label>{{ booking_form.email }}{{ booking_form.email.errors }}</div>
+              <div class="col-12"><button class="btn btn-accent btn-lg w-100" type="submit">Request Booking</button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% include "includes/footer.html" %}
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Services | CloudRide{% endblock %}
+
+{% block content %}
+{% include "includes/navbar.html" %}
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Services</span>
+      <h1>All your electric mobility needs in one dependable service network.</h1>
+      <p>From everyday EV rides to company fleet support, CloudRide keeps clean movement simple and practical.</p>
+    </div>
+  </section>
+
+  <section class="section-pad bg-white">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6 col-xl-4 reveal"><article class="service-card"><i class="bi bi-car-front"></i><h3>EV Rides</h3><p>Professional electric transportation for everyday journeys, appointments, and airport movement.</p><a href="{% url 'core:booking' %}">Request a ride</a></article></div>
+        <div class="col-md-6 col-xl-4 reveal"><article class="service-card"><i class="bi bi-person-plus"></i><h3>Proxy Booking</h3><p>Book rides on behalf of guests, family members, employees, or visiting partners.</p><a href="{% url 'core:booking' %}">Book for someone</a></article></div>
+        <div class="col-md-6 col-xl-4 reveal"><article class="service-card"><i class="bi bi-key"></i><h3>EV Rentals</h3><p>Flexible electric vehicle access for personal, business, event, or project use.</p><a href="{% url 'core:vehicles' %}">View vehicles</a></article></div>
+        <div class="col-md-6 col-xl-4 reveal"><article class="service-card"><i class="bi bi-calendar2-check"></i><h3>Reservations</h3><p>Pre-scheduled ride and rental bookings for important trips and recurring movement.</p><a href="{% url 'core:booking' %}">Schedule ahead</a></article></div>
+        <div class="col-md-6 col-xl-4 reveal"><article class="service-card"><i class="bi bi-badge-ad"></i><h3>In-Vehicle Ads</h3><p>Brand visibility through tasteful campaign placements inside selected fleet vehicles.</p><a href="{% url 'core:contact' %}">Advertise with us</a></article></div>
+        <div class="col-md-6 col-xl-4 reveal"><article id="corporate-mobility" class="service-card"><i class="bi bi-diagram-3"></i><h3>Fleet Solutions</h3><p>Planning, vehicle access, charging guidance, and operations support for business fleets.</p><a href="{% url 'core:corporate' %}">Explore fleet services</a></article></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad bg-soft">
+    <div class="container">
+      <div class="section-heading text-center reveal">
+        <span class="eyebrow dark">FAQ</span>
+        <h2 class="section-title">Frequently asked questions</h2>
+      </div>
+      <div class="accordion faq-accordion reveal" id="faq">
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne">How does booking work?</button></h3><div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body">Submit a booking request with pickup, destination, date, and time. Our operations team confirms availability and next steps.</div></div></div>
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo">Can I schedule a ride in advance?</button></h3><div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Yes. Use Scheduled Ride on the booking form for airport trips, meetings, events, and recurring movement.</div></div></div>
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree">Do you support companies?</button></h3><div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Yes. We support corporate rides, employee transport, rentals, charging guidance, and fleet transition planning.</div></div></div>
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour">Are the figures on the site live?</button></h3><div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Some sustainability figures are placeholders until real operational data is connected. Vehicles and charging stations can already be managed in Django Admin.</div></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+{% include "includes/footer.html" %}
+{% endblock %}
