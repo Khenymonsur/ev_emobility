@@ -1,0 +1,46 @@
+{% extends "base.html" %} {% load static %} {% block title %}Download the app |
+CloudRide{% endblock %} {% block content %} {% include "includes/navbar.html" %}
+
+<main class="app-download-page">
+  <section class="app-download-hero">
+    <div class="app-download-overlay"></div>
+    <div class="container app-download-content">
+      <div class="app-download-copy reveal">
+        <span class="eyebrow">CloudRide in your pocket</span>
+        <h1>Move smarter, from anywhere.</h1>
+        <p>
+          Book electric rides, manage your trips, and stay connected to cleaner
+          city travel.
+        </p>
+      </div>
+
+      <div
+        class="app-store-links reveal"
+        aria-label="Download the CloudRide app"
+      >
+        <a
+          class="app-store-link"
+          href="https://apps.apple.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download CloudRide on the App Store"
+        >
+          <i class="bi bi-apple" aria-hidden="true"></i>
+          <span><small>Download on the</small>App Store</span>
+        </a>
+        <a
+          class="app-store-link"
+          href="https://play.google.com/store/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Get CloudRide on Google Play"
+        >
+          <i class="bi bi-google-play" aria-hidden="true"></i>
+          <span><small>Get it on</small>Google Play</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "includes/footer.html" %} {% endblock %}

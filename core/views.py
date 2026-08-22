@@ -209,6 +209,10 @@ def booking(request):
     return render(request, "core/booking.html", site_context(booking_form=booking_form))
 
 
+def download_app(request):
+    return render(request, "core/download_app.html")
+
+
 def privacy_policy(request):
     return render(request, "core/privacy_policy.html")
 

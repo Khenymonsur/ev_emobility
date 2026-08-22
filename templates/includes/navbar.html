@@ -1,29 +1,69 @@
 {% load static %}
 <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="{% url 'core:home' %}" aria-label="CloudRide home">
-      <img class="site-logo" src="{% static 'img/CLOUDRIDE LOGO_ICON_WHITE.png' %}" alt="CloudRide">
+    <a
+      class="navbar-brand"
+      href="{% url 'core:home' %}"
+      aria-label="CloudRide home"
+    >
+      <img
+        class="site-logo"
+        src="{% static 'img/CLOUDRIDE LOGO_ICON_WHITE.png' %}"
+        alt="CloudRide"
+      />
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#siteNav"
+      aria-controls="siteNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="siteNav">
       <ul class="navbar-nav ms-auto align-items-lg-center">
-        <li class="nav-item"><a class="nav-link" href="{% url 'core:home' %}">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'core:about' %}">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'core:services' %}">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'core:vehicles' %}">Vehicles</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'core:charge_station' %}">Charge Station</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'core:corporate' %}">Corporate</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'core:gallery' %}">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'core:contact' %}">Contact</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'core:about' %}">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'core:services' %}">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'core:charge_station' %}"
+            >Charge Station</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'core:gallery' %}">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'core:contact' %}">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'core:download_app' %}"
+            >Download app</a
+          >
+        </li>
         <li class="nav-item ms-lg-3">
-          <a class="btn btn-accent btn-sm nav-cta" href="{% url 'core:booking' %}">Book a Ride</a>
+          <a
+            class="btn btn-accent btn-sm nav-cta"
+            href="{% url 'core:booking' %}"
+            >Book a Ride</a
+          >
         </li>
         <li class="nav-item ms-lg-2">
-          <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false" title="Toggle dark mode">
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+            aria-pressed="false"
+            title="Toggle dark mode"
+          >
             <i class="bi bi-moon-stars"></i>
           </button>
         </li>

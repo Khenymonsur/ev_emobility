@@ -19,6 +19,7 @@ class HomePageTests(TestCase):
             ("core:gallery", "Clean mobility"),
             ("core:contact", "We would love to hear from you"),
             ("core:booking", "Request an electric ride"),
+            ("core:download_app", "Move smarter, from anywhere."),
         ]
 
         for route_name, expected_text in pages:

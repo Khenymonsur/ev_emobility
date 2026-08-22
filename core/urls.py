@@ -14,6 +14,7 @@ urlpatterns = [
     path("gallery/", views.gallery, name="gallery"),
     path("contact/", views.contact, name="contact"),
     path("booking/", views.booking, name="booking"),
+    path("download-app/", views.download_app, name="download_app"),
     path("privacy/", views.privacy_policy, name="privacy_policy"),
     path("terms/", views.terms_conditions, name="terms_conditions"),
 ]
