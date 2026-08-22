@@ -1,22 +1,27 @@
+{% load static %}
 <div class="ignition-overlay" id="ignitionOverlay" aria-labelledby="ignitionTitle" aria-modal="true" role="dialog">
   <div class="ignition-road" aria-hidden="true">
     <span></span>
     <span></span>
     <span></span>
   </div>
+
   <div class="ignition-panel">
     <button class="engine-button" id="engineStartButton" type="button" aria-describedby="ignitionHint">
       <span class="engine-ring"></span>
       <span class="engine-light"></span>
-      <span class="engine-symbol"><i class="bi bi-lightning-charge-fill"></i></span>
-      <span class="engine-brand">CloudRide</span>
+      <span class="engine-logo">
+        <img src="{% static 'img/CLOUDRIDE LOGO_ICON_WHITE.png' %}" alt="CloudRide">
+      </span>
     </button>
+
     <div class="ignition-car" aria-hidden="true">
       <i class="bi bi-car-front-fill"></i>
       <span class="speed-line line-one"></span>
       <span class="speed-line line-two"></span>
       <span class="speed-line line-three"></span>
     </div>
+
     <h2 id="ignitionTitle">Push to Start</h2>
     <p id="ignitionHint">Start the engine and enter electric mobility.</p>
   </div>
