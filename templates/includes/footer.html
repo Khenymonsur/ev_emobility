@@ -4,11 +4,22 @@
   <div class="container">
     <div class="row g-4">
       <div class="col-lg-4">
-        <a class="footer-brand" href="{% url 'core:home' %}" aria-label="CloudRide home">
-          <img class="footer-logo" src="{% static 'img/CLOUDRIDE LOGO_ICON_WHITE.png' %}" alt="CloudRide">
+        <a
+          class="footer-brand"
+          href="{% url 'core:home' %}"
+          aria-label="CloudRide home"
+        >
+          <img
+            class="footer-logo"
+            src="{% static 'img/CLOUDRIDE LOGO_ICON_WHITE.png' %}"
+            alt="CloudRide"
+          />
         </a>
 
-        <p>Electric rides, rentals, charging access, and fleet services for cleaner African mobility.</p>
+        <p>
+          Electric rides, rentals, charging access, and fleet services for
+          cleaner African mobility.
+        </p>
 
         <div class="socials footer-socials">
           <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
@@ -38,7 +49,60 @@
         <a href="{% url 'core:contact' %}">Become a partner</a>
         <a href="{% url 'core:contact' %}">Become a driver</a>
         <a href="{% url 'core:contact' %}">Advertise your business</a>
-        <p class="mt-3">hello@cloudride.africa<br>+234 800 000 0000<br>Victoria Island, Lagos</p>
+        <p class="mt-3">
+          info@cloudride.com.ng<br />+234 903 798 7643<br />Palmgrove, Lagos Nigeria.
+          Lagos State.
+        </p>
+
+        <h3 class="footer-app-title">Download the app</h3>
+        <div class="footer-qr-codes">
+          <div class="footer-app-option">
+            <a
+              class="footer-app-badge"
+              href="https://apps.apple.com/us/app/cloudride/id6776576767"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download CloudRide on the App Store"
+            >
+              <i class="bi bi-apple" aria-hidden="true"></i> App Store
+            </a>
+            <a
+              href="https://apps.apple.com/us/app/cloudride/id6776576767"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Scan to download CloudRide for iPhone"
+            >
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fcloudride%2Fid6776576767"
+                alt="QR code for the CloudRide iPhone app"
+              />
+              <span>iPhone</span>
+            </a>
+          </div>
+          <div class="footer-app-option">
+            <a
+              class="footer-app-badge"
+              href="https://play.google.com/store/apps/details?id=com.cloudride.nigeria.passenger&amp;pli=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Get CloudRide on Google Play"
+            >
+              <i class="bi bi-google-play" aria-hidden="true"></i> Google Play
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.cloudride.nigeria.passenger&amp;pli=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Scan to download CloudRide for Android"
+            >
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.cloudride.nigeria.passenger%26pli%3D1"
+                alt="QR code for the CloudRide Android app"
+              />
+              <span>Android</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
